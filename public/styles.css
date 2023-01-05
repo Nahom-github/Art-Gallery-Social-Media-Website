@@ -1,0 +1,29 @@
+
+.homePage{
+  background-color: aquamarine;
+  border: 10px;
+}
+
+.login{
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+}
+
+.log{
+    justify-content: center;
+}
+body {
+    padding-left: 10px;
+    background-color: lightseagreen;
+}
+
+
+button{
+    background-color: deeppink;
+}
+
+button:hover{
+    opacity: 0.5;
+    background-color:rgb(190, 96, 190);
+}

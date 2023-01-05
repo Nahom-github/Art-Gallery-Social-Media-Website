@@ -1,0 +1,17 @@
+html
+    head
+        title artist
+        link(rel='stylesheet', href='/styles.css')
+    
+    body
+        h1 Home
+
+        include header
+        br
+
+        each art in gallery
+            br
+            img(src=art.image width="300" height="300")
+            a(href='/artwork/'+ art.name) #{art.name}
+            br
+        div#results

@@ -1,0 +1,20 @@
+html
+    head
+        title Workshop
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Create a workshop
+        include header
+        form(action='/workshops', method='POST')
+            p title:
+                input#artist(type="textbox",name="title")
+            p Description:
+                input#minattack(type="textbox",name="description")
+            button#refresh(type="submit") create Workshop
+        h3 Workshops:
+        each artist in gallery 
+            each work in artist.workshop
+                a(href='/workshop/'+ work.name) #{work.name} workshop hosted by #{artist.username}
+                br
+                br
+        div#results

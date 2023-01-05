@@ -1,0 +1,25 @@
+doctype html 
+html
+    head
+        title artist
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    body
+        <div class="myDiv">
+        h1 Home
+        include header
+        br
+        h2 #{gallery[0].artist}
+        br
+        button(type='button' id='follow' onclick="follow()") Follow
+
+        each art in gallery
+            br
+            img(src=art.image width="300" height="300")
+            a(href='/artwork/'+ art.name) #{art.name}
+            br
+        h3 Reviews: 
+        each key, review in artist.reviews
+            each entry, val in key 
+                l1 <b>#{entry} - #{val}<br>
+        </div>

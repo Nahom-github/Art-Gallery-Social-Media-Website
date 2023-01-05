@@ -1,0 +1,22 @@
+html
+    head
+        title Search
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Search Artworks
+
+        p search the artworks based on the inputs down below.
+        form(action='/search', method='GET')
+            p title:
+                input#artist(type="textbox",name="name")
+            p artist:
+                input#name(type="textbox", name="artist")
+            p Year:
+                input#minattack(type="textbox",name="year")
+            p Category:
+                input#maxattack(type="textbox",name="category")
+            p medium:
+                input#minhealth(type="textbox",name="medium")
+            button#refresh(type="submit") Find Artworks
+
+        div#results

@@ -1,0 +1,14 @@
+html
+    head
+        title Sign up
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Sign Up
+        form(action='/signUp', method='POST')
+            p Username:
+                input#username(type="textbox",name="username")
+            p Password:
+                input#password(type="password", name="password")
+            button#refresh(type="submit") submit
+
+        div#results

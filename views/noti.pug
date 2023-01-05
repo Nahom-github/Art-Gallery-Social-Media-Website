@@ -1,0 +1,17 @@
+html
+    head
+        title Art Gallery
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    
+    <body>
+        h1 Notifications
+
+        include header
+        br
+        h3 Your Notifications:
+        each noti in gallery 
+            l1 #{noti}
+            br
+
+        div#results

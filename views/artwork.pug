@@ -1,0 +1,39 @@
+html
+    head
+        title login Page
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    
+    <body onload="init('#{username}', #{JSON.stringify(art)})">
+        h1 Home
+
+        include header
+        br
+        img(src=art.image width="300" height="300")
+        a(href='/artwork/'+ art.name) #{art.name}
+        p #{art.year}
+        l1 Artist: 
+        a(href='/artist/'+ art.artist) #{art.artist}
+        br
+        l1 category: 
+        a(href='/category/'+ art.category) #{art.category}
+        br
+        l1 Medium: 
+        a(href='/medium/'+ art.medium) #{art.medium}
+        br
+        p #{art.description}
+        l1#likes Likes: #{art.likes} 
+        button(type='button' id='likes' onclick="likeartWork()") Like
+        br
+        input(type='text' id='review' name='review1' placeholder='Write your review' size='30x30')
+        button(type='button' id='submitReview' onclick="reviewArt()") submit review
+        h3 Reviews:
+        each key, review in art.reviews
+            each entry, val in key 
+                l1 <b>#{entry} - #{val}<br>
+
+
+
+        
+
+        div#results

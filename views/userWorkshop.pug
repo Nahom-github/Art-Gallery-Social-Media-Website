@@ -1,0 +1,13 @@
+html
+    head
+        title Workshop
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Sign up for a workshop:
+        include header
+        each artist in gallery 
+            each work in artist.workshop
+                a(href='/workshop/'+ work.name) #{work.name} workshop hosted by #{artist.username}
+                br
+                br
+        div#results

@@ -1,0 +1,18 @@
+html
+    head
+        title login Page
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    
+    <body onload="init('#{username}', #{JSON.stringify(art)})">
+        h1 Home
+
+        include header
+        br
+        h3 Your Favorite Artists:
+        each art in gallery
+            l1 Artist: 
+            a(href='/artist/'+ art.artist) #{art.artist}
+            br
+
+        div#results

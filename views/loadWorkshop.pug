@@ -1,0 +1,20 @@
+html
+    head
+        title Workshop
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    
+    <body>
+        h1 Workshop
+        include header
+        br
+        h3 workshop Name: #{workshop.name}
+        h3 workshop description #{workshop.description}
+        l1 Enrolled:
+        br
+        each parti in workshop.enrolled 
+            l1 #{parti}
+            br
+        br
+        button(type='button' id='enroll' onclick="enroll()") Enroll
+        div#results

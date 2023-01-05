@@ -1,0 +1,19 @@
+html
+    head
+        title Your reviews
+        script(src="/client.js")
+        link(rel='stylesheet', href='/styles.css')
+    <body>
+        h1 Reviews
+
+        include header
+        br
+        h3 Your Reviews:
+        each art, key in gallery 
+            each entry, val in art
+                l1 #{val}: 
+                a(href='/artwork/'+ val) #{entry}
+                br
+            br
+
+        div#results

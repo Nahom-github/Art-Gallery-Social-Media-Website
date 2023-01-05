@@ -1,0 +1,13 @@
+html
+    head
+        title Workshop
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 workshops
+        include header
+        h3 Enrolled Workshops: 
+        each work in artist.workshop
+            a(href='/workshop/'+ work.name) #{work.name} workshop
+            br
+            br
+        div#results
